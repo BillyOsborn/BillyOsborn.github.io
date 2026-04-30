@@ -16,13 +16,13 @@
     <meta property="og:url" content="https://billyosborn.github.io">
     <meta property="og:title" content="Billy Osborn Atetwe | Innovation & AI Leadership Consultant">
     <meta property="og:description" content="Architecting Africa's Innovation Future — through strategic AI integration, ecosystem building, and purpose-led leadership.">
-    <meta property="og:image" content="https://billyosborn.github.io/images/og-image.jpg">
+    <meta property="og:image" content="https://billyosborn.github.io/images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg">
 
     <!-- ======= SEO: Twitter / X Card ======= -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Billy Osborn Atetwe | Innovation & AI Leadership Consultant">
     <meta name="twitter:description" content="Architecting Africa's Innovation Future — strategic AI, ecosystems, leadership.">
-    <meta name="twitter:image" content="https://billyosborn.github.io/images/og-image.jpg">
+    <meta name="twitter:image" content="https://billyosborn.github.io/images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg">
 
     <!-- ======= Canonical URL ======= -->
     <link rel="canonical" href="https://billyosborn.github.io">
@@ -38,6 +38,21 @@
 
     <!-- Our Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Brevo Form Styles -->
+    <style>
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 <body>
 
@@ -1318,7 +1333,7 @@
                             <span>Human Resource Manager</span>
                             <span class="tcard-org">Nakuru Box Innovation Centre</span>
                         </div>
-                        <a href="linkedin.com/in/kevin-thananga-59552b213"
+                        <a href="linkedin.com/in/kevin-thananga-59552b213/"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
@@ -1353,7 +1368,7 @@
                             <span>Secretary, Training & Infrastructure</span>
                             <span class="tcard-org">Association of Countrywide Innovation Hubs</span>
                         </div>
-                        <a href="linkedin.com/in/njihia-the-startup-shark"
+                        <a href="linkedin.com/in/njihia-the-startup-shark/"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
@@ -1452,7 +1467,7 @@
                             <span>Human Resource Manager</span>
                             <span class="tcard-org">Nakuru Box Innovation Centre</span>
                         </div>
-                        <a href="linkedin.com/in/kevin-thananga-59552b213"
+                        <a href="linkedin.com/in/kevin-thananga-59552b213/"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
@@ -1487,7 +1502,7 @@
                             <span>Secretary, Training & Infrastructure</span>
                             <span class="tcard-org">Association of Countrywide Innovation Hubs</span>
                         </div>
-                        <a href="linkedin.com/in/njihia-the-startup-shark"
+                        <a href="linkedin.com/in/njihia-the-startup-shark/"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
@@ -1798,17 +1813,34 @@
                 </article>
 
                 <!-- Article 6 — Placeholder for your first published piece -->
-                <article class="blog-card blog-card--write-prompt" data-category="all">
+                <article class="blog-card" data-category="leadership">
                     <div class="blog-card-top">
-                        <div class="write-prompt-icon">✍️</div>
-                        <h3 class="blog-title">The Next Article Lives Here</h3>
+                        <div class="blog-meta">
+                            <span class="blog-badge blog-badge--leadership">Leadership</span>
+                            <span class="blog-date">April 2026</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3 class="blog-title">
+                            Reacting to Life, Not Building
+                        </h3>
                         <p class="blog-excerpt">
-                            Stay tuned for the next piece.
+                            Most entrepreneurial failures are not strategic errors.
+                            They are survival responses wearing a startup's clothes.
+                            A sharp look at why would-be entrepreneurs react instead of build.
                         </p>
                     </div>
                     <div class="blog-card-bottom">
-                        <a href="#contact" class="blog-read-link">
-                            Let's write it together →
+                        <div class="blog-author">
+                            <img src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                 alt="Billy Osborn Atetwe" class="blog-author-img"/>
+                            <span>Billy Osborn Atetwe</span>
+                        </div>
+                        <a href="articles/reacting-to-life-not-building.html" class="blog-read-link">
+                            Read Article
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" width="14" height="14">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
                         </a>
                     </div>
                 </article>
@@ -1825,20 +1857,96 @@
                         Unsubscribe any time.
                     </p>
                 </div>
-                <form class="blog-newsletter-form" id="newsletter-form">
-                    <input
-                        type="email"
-                        id="newsletter-email"
-                        name="email"
-                        placeholder="your@email.com"
-                        autocomplete="email"
-                        required
-                    />
-                    <button type="submit" class="btn btn-primary" id="newsletter-btn">
-                        <span id="newsletter-btn-text">Subscribe</span>
-                    </button>
-                </form>
-                <p class="newsletter-note" id="newsletter-feedback" aria-live="polite"></p>
+                
+                <!-- BEGIN Brevo Newsletter Form -->
+                <div class="brevo-form-wrap" id="brevo-subscribe">
+
+                    <div id="sib-form-container" class="sib-form-container">
+
+                        <!-- Error message -->
+                        <div id="error-message" class="sib-form-message-panel"
+                             style="display:none; font-size:14px; text-align:left;
+                                    font-family:Helvetica,sans-serif; color:#661d1d;
+                                    background-color:#ffeded; border-radius:3px;
+                                    border-color:#ff4949; max-width:540px;">
+                            <div class="sib-form-message-panel__text">
+                                <span>Your subscription could not be saved. Please try again.</span>
+                            </div>
+                        </div>
+
+                        <!-- Success message -->
+                        <div id="success-message" class="sib-form-message-panel"
+                             style="display:none; font-size:14px; text-align:left;
+                                    font-family:Helvetica,sans-serif; color:#085229;
+                                    background-color:#e7faf0; border-radius:3px;
+                                    border-color:#13ce66; max-width:540px;">
+                            <div class="sib-form-message-panel__text">
+                                <span>✅ Subscribed. Check your inbox for a welcome message.</span>
+                            </div>
+                        </div>
+
+                        <div id="sib-container" class="sib-container--large sib-container--vertical">
+                            <form id="sib-form" method="POST"
+                                action="https://a92353a1.sibforms.com/serve/MUIFAFay4MS49HK4hS1nZ4nt--WXHrowZRW19BXZnjw5-40nOFlfJxuvGF7j8J5hFv4b02ve5wvjEeDQ8VFJmPdvQDshVTUpltG99uw61tntOrpfamwsJ9k4PG352MMhqPxxT4hUZbc6PeLN6_9d2vpxkEtySKGpky-tliXgDfk_IdWpImSX-9Qra2zCFqpq9-U1mYtWwcFEc61qVQ=="
+                                data-type="subscription">
+
+                                <!-- First name (optional) -->
+                                <div style="padding: 8px 0;">
+                                    <div class="sib-input sib-form-block">
+                                        <div class="form__entry entry_block">
+                                            <div class="form__label-row">
+                                                <div class="entry__field">
+                                                    <input class="input" type="text"
+                                                        id="FIRSTNAME" name="FIRSTNAME"
+                                                        autocomplete="off"
+                                                        placeholder="Your first name (optional)"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email (required) -->
+                                <div style="padding: 8px 0;">
+                                    <div class="sib-input sib-form-block">
+                                        <div class="form__entry entry_block">
+                                            <div class="form__label-row">
+                                                <div class="entry__field">
+                                                    <input class="input" type="text"
+                                                        id="EMAIL" name="EMAIL"
+                                                        autocomplete="off"
+                                                        placeholder="your@email.com"
+                                                        data-required="true" required/>
+                                                </div>
+                                            </div>
+                                            <label class="entry__error entry__error--primary"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit button -->
+                                <div style="padding: 8px 0;">
+                                    <div class="sib-form-block">
+                                        <button class="sib-form-block__button sib-form-block__button-with-loader"
+                                            form="sib-form" type="submit">
+                                            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                                viewBox="0 0 512 512">
+                                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.010z"/>
+                                            </svg>
+                                            Subscribe
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <input type="text" name="email_address_check" value="" class="input--hidden">
+                                <input type="hidden" name="locale" value="en">
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- END Brevo Newsletter Form -->
             </div>
 
         </div>
@@ -2327,13 +2435,31 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© <span id="footer-year"></span> Billy Osborn. All rights reserved.</p>
+                <p>© <span id="footer-year"></span> Billy Osborn Atetwe. All rights reserved.</p>
                 <p class="footer-built">Built with purpose. Hosted free on GitHub Pages.</p>
             </div>
 
         </div>
     </footer>
     <!-- END FOOTER -->
+
+
+    <!-- Brevo Form Script -->
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'en';
+        window.EMAIL_INVALID_MESSAGE = "Please enter a valid email address.";
+        window.REQUIRED_ERROR_MESSAGE = "Email address is required.";
+        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid.";
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected'
+            }
+        };
+        var AUTOHIDE = Boolean(0);
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 
     <!-- Our JavaScript -->
