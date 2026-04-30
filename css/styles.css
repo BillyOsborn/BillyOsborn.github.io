@@ -3723,151 +3723,26 @@ a.contact-item-value:hover {
 }
 
 /* ============================================
-   BREVO SUBSCRIPTION FORM — SITE STYLING
-   Uses !important to override Brevo's inline styles
+   BREVO IFRAME FORM
    ============================================ */
 
-/* Remove all of Brevo's default container styling */
-.brevo-form-wrap .sib-form,
-.brevo-form-wrap #sib-form-container,
-.brevo-form-wrap .sib-form-container {
-    background: transparent !important;
-    padding: 0 !important;
-    text-align: left !important;
+.brevo-iframe-wrap {
+    width: 100%;
+    max-width: 560px;
 }
 
-/* The main white box — this is the key override */
-.brevo-form-wrap #sib-container {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    max-width: 100% !important;
-    text-align: left !important;
-    padding: 0 !important;
-}
-
-/* Layout: row on desktop */
-.brevo-form-wrap #sib-form {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.75rem !important;
-    align-items: center !important;
-    padding: 0 !important;
-}
-
-/* Each field wrapper */
-.brevo-form-wrap .sib-input.sib-form-block {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.brevo-form-wrap .form__entry.entry_block {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.brevo-form-wrap .form__label-row {
-    margin: 0 !important;
-}
-
-/* Hide labels */
-.brevo-form-wrap .entry__label {
-    display: none !important;
-}
-
-/* Hide specification text */
-.brevo-form-wrap .entry__specification {
-    display: none !important;
-}
-
-/* Input fields */
-.brevo-form-wrap input.input {
-    width: 200px !important;
-    padding: 0.75rem 1.1rem !important;
-    background: rgba(255, 255, 255, 0.07) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 50px !important;
-    font-family: var(--font-body) !important;
-    font-size: 0.875rem !important;
-    color: var(--white) !important;
-    outline: none !important;
-    box-sizing: border-box !important;
-    transition: border-color 0.3s ease !important;
-    height: auto !important;
-}
-
-.brevo-form-wrap input.input:focus {
-    border-color: var(--accent) !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-}
-
-.brevo-form-wrap input.input::placeholder {
-    color: rgba(255, 255, 255, 0.35) !important;
-}
-
-/* Submit button — override Brevo's dark grey */
-.brevo-form-wrap .sib-form-block__button,
-.brevo-form-wrap button[form="sib-form"] {
-    background: var(--accent) !important;
-    background-color: var(--accent) !important;
-    color: var(--primary) !important;
-    border: none !important;
-    border-radius: 50px !important;
-    padding: 0.75rem 1.5rem !important;
-    font-family: var(--font-body) !important;
-    font-size: 0.875rem !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-    white-space: nowrap !important;
-    height: auto !important;
-    text-transform: none !important;
-    letter-spacing: 0 !important;
-    width: auto !important;
-}
-
-.brevo-form-wrap .sib-form-block__button:hover {
-    background: var(--accent-dark) !important;
-    background-color: var(--accent-dark) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(212, 168, 67, 0.3) !important;
-}
-
-/* Loader spinner — hide it (shows during submission) */
-.brevo-form-wrap .sib-hide-loader-icon {
-    display: none !important;
-}
-
-/* Error + success message panels */
-.brevo-form-wrap #error-message,
-.brevo-form-wrap #success-message {
-    margin-top: 0.75rem !important;
-    border-radius: 8px !important;
-    font-size: 0.82rem !important;
-    max-width: 100% !important;
+.brevo-iframe-wrap iframe {
     width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    background: transparent;
 }
 
-/* Remove padding from the sib-form-block wrapping the button */
-.brevo-form-wrap .sib-form-block {
-    padding: 0 !important;
-    background: transparent !important;
-}
-
-/* Mobile: stack vertically */
+/* On mobile, reduce height slightly */
 @media (max-width: 640px) {
-    .brevo-form-wrap #sib-form {
-        flex-direction: column !important;
-        align-items: stretch !important;
-    }
-
-    .brevo-form-wrap input.input {
-        width: 100% !important;
-    }
-
-    .brevo-form-wrap .sib-form-block__button {
-        width: 100% !important;
-        text-align: center !important;
-        justify-content: center !important;
+    .brevo-iframe-wrap iframe {
+        height: 340px !important;
     }
 }
