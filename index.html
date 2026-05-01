@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Resource hints — pre-connect to external servers -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://assets.calendly.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    <link rel="preconnect" href="https://sibforms.com">
+    <link rel="dns-prefetch" href="https://sibforms.com">
+    
     <!-- ======= Google Analytics 4 ======= -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8F5GTH3XG"></script>
     <script>
@@ -176,11 +184,20 @@
 
                     <!-- Profile photo -->
                     <div class="hero-photo-wrap">
-                        <img
-                            src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                            alt="Billy Osborn Atetwe — Innovation and AI Leadership Consultant, Kenya and Africa"
-                            class="hero-photo-img"
-                        />
+                        <!-- Hero photo — replace existing <img> tag -->
+                        <picture>
+                            <source
+                                srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                type="image/webp">
+                            <img
+                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                alt="Billy Osborn Atetwe — Innovation and AI Leadership Consultant, Kenya and Africa"
+                                class="hero-photo-img"
+                                width="160"
+                                height="160"
+                                loading="eager"
+                            />
+                        </picture>
                         <div class="hero-photo-ring"></div>
                     </div>
 
@@ -1335,7 +1352,7 @@
                             <img
                             src="images/kevin-thananga-kkay-nakuru-box.jpg"
                             alt="Kevin Thananga - Kkay and Nakuru Box"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Kevin Thananga</strong>
@@ -1370,7 +1387,7 @@
                             <img
                             src="images/kenneth-njihia-sote-hub-countrywide-acih-startup-shark.jpg"
                             alt="Kenneth Njihia - Sote Hub and Countrywwide Innovation Hubs (ACIH) Startup Shark"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Kenneth Njihia</strong>
@@ -1405,7 +1422,7 @@
                             <img
                             src="images/daisy-otieno-global-alliance-for-improved-nutrition-(gain).jpg"
                             alt="Daisy Otieno - Global Alliance for Improved Nutrition (GAIN)"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Daisy Otieno</strong>
@@ -1469,7 +1486,7 @@
                             <img
                             src="images/kevin-thananga-kkay-nakuru-box.jpg"
                             alt="Kevin Thananga - Kkay and Nakuru Box"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Kevin Thananga</strong>
@@ -1504,7 +1521,7 @@
                             <img
                             src="images/kenneth-njihia-sote-hub-countrywide-acih-startup-shark.jpg"
                             alt="Kenneth Njihia - Sote Hub and Countrywwide Innovation Hubs (ACIH) Startup Shark"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Kenneth Njihia</strong>
@@ -1539,7 +1556,7 @@
                             <img
                             src="images/daisy-otieno-global-alliance-for-improved-nutrition-(gain).jpg"
                             alt="Daisy Otieno - Global Alliance for Improved Nutrition (GAIN)"
-                            width="44" height="44"/>
+                            width="44" height="44" loading="lazy"/>
                         </div>
                         <div class="tcard-author-info">
                             <strong>Daisy Otieno</strong>
@@ -1655,11 +1672,20 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img
-                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                alt="Billy Osborn Atetwe"
-                                class="blog-author-img"
-                            />
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
                             <span>Billy Osborn</span>
                         </div>
                         <a href="articles/ethical-ai-gap.html" class="blog-read-link">
@@ -1692,11 +1718,20 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img
-                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                alt="Billy Osborn Atetwe"
-                                class="blog-author-img"
-                            />
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
                             <span>Billy Osborn</span>
                         </div>
                         <a href="#" class="blog-read-link">
@@ -1729,11 +1764,20 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img
-                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                alt="Billy Osborn Atetwe"
-                                class="blog-author-img"
-                            />
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
                             <span>Billy Osborn</span>
                         </div>
                         <a href="#" class="blog-read-link">
@@ -1766,11 +1810,20 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img
-                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                alt="Billy Osborn Atetwe"
-                                class="blog-author-img"
-                            />
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
                             <span>Billy Osborn</span>
                         </div>
                         <a href="#" class="blog-read-link">
@@ -1804,11 +1857,20 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img
-                                src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                alt="Billy Osborn Atetwe"
-                                class="blog-author-img"
-                            />
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
                             <span>Billy Osborn</span>
                         </div>
                         <a href="#" class="blog-read-link">
@@ -1840,9 +1902,21 @@
                     </div>
                     <div class="blog-card-bottom">
                         <div class="blog-author">
-                            <img src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
-                                 alt="Billy Osborn Atetwe" class="blog-author-img"/>
-                            <span>Billy Osborn Atetwe</span>
+                            <!-- Replace all blog-author-img tags with this pattern -->
+                            <picture>
+                                <source
+                                    srcset="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.webp"
+                                    type="image/webp">
+                                <img
+                                    src="images/billy-osborn-atetwe-innovation-ai-consultant-kenya-africa.jpg"
+                                    alt="Billy Osborn Atetwe"
+                                    class="blog-author-img"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            <span>Billy Osborn</span>
                         </div>
                         <a href="articles/reacting-to-life-not-building.html" class="blog-read-link">
                             Read Article
@@ -2112,10 +2186,6 @@
                 data-url="https://calendly.com/billyosborn139/discovery-call-with-billy-osborn"
                 style="min-width:320px; height:700px;">
             </div>
-            <script type="text/javascript"
-                src="https://assets.calendly.com/assets/external/widget.js"
-                async>
-            </script>
 
         </div>
     </section>

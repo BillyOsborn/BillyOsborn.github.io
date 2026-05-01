@@ -603,6 +603,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
+    // --- LAZY LOAD CALENDLY ---
+    // Only loads the Calendly script when the booking section scrolls into view
+    const bookingSection = document.getElementById('booking');
+
+    if (bookingSection) {
+        const calendlyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const script = document.createElement('script');
+                    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+                    script.async = true;
+                    document.head.appendChild(script);
+                    calendlyObserver.unobserve(bookingSection);
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        calendlyObserver.observe(bookingSection);
+    }
+
+    
 }); // End DOMContentLoaded
 
 // ---- COPY M-PESA NUMBER TO CLIPBOARD ----
