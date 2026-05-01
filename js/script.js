@@ -5,6 +5,10 @@
 
 
 // --- WAIT FOR PAGE TO FULLY LOAD ---
+window.onerror = function(msg, src, line) {
+    console.log('JS Error:', msg, 'Line:', line);
+    return false;
+};
 document.addEventListener('DOMContentLoaded', () => {
 
 
