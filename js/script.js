@@ -570,10 +570,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Track contact form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', () => {
+    // Track contact form submission (reuses contactForm declared above)
+    const gaContactForm = document.getElementById('contact-form');
+    if (gaContactForm) {
+        gaContactForm.addEventListener('submit', () => {
             gtag('event', 'contact_form_submit', {
                 event_category: 'lead',
                 event_label: 'Contact form'
