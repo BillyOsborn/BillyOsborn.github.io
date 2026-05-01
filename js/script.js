@@ -554,6 +554,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // --- GOOGLE ANALYTICS 4 — EVENT TRACKING ---
+
+    // Track "Book a Call" button clicks
+    document.querySelectorAll('a[href="#booking"], .nav-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+            gtag('event', 'book_call_click', {
+                event_category: 'engagement',
+                event_label: 'Book a Call button'
+            });
+        });
+    });
+
+    // Track contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+            gtag('event', 'contact_form_submit', {
+                event_category: 'lead',
+                event_label: 'Contact form'
+            });
+        });
+    }
+
+    // Track "Read Article" link clicks
+    document.querySelectorAll('.blog-read-link').forEach(link => {
+        link.addEventListener('click', () => {
+            gtag('event', 'article_click', {
+                event_category: 'content',
+                event_label: link.closest('article')?.querySelector('.blog-title')?.textContent?.trim() || 'Unknown article'
+            });
+        });
+    });
+
+    // Track CV download
+    document.querySelectorAll('a[download]').forEach(link => {
+        link.addEventListener('click', () => {
+            gtag('event', 'cv_download', {
+                event_category: 'engagement',
+                event_label: 'CV Download'
+            });
+        });
+    });
+
+    
+
 }); // End DOMContentLoaded
 
 // ---- COPY M-PESA NUMBER TO CLIPBOARD ----
