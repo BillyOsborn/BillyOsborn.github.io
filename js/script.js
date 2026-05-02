@@ -12,31 +12,33 @@ window.onerror = function(msg, src, line) {
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    // --- HAMBURGER MENU (Mobile) ---
+    // --- HAMBURGER MENU ---
     const hamburger = document.getElementById('hamburger');
     const navLinks   = document.getElementById('nav-links');
 
-    // Toggle menu open/closed when hamburger is clicked
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('open');
-    });
-
-    // Close menu when ANY link inside the nav is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navLinks.classList.remove('open');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
         });
-    });
 
-    // Close menu if user clicks anywhere OUTSIDE the navbar
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.navbar')) {
-            hamburger.classList.remove('open');
-            navLinks.classList.remove('open');
-        }
-    });
+        // Close on link click
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.navbar')) {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            }
+        });
+    }
 
 
     // --- NAVBAR SCROLL EFFECT ---

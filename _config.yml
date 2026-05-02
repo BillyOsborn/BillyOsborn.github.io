@@ -1,0 +1,12 @@
+# Jekyll configuration for GitHub Pages
+# Forces correct MIME types for XML files
+
+include:
+  - sitemap.xml
+  - robots.txt
+
+defaults:
+  - scope:
+      path: "sitemap.xml"
+    values:
+      layout: null
