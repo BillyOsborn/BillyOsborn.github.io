@@ -625,7 +625,30 @@ document.addEventListener('DOMContentLoaded', () => {
         calendlyObserver.observe(bookingSection);
     }
 
-    
+
+    // --- GALLERY FILTER ---
+    const galleryFilterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems       = document.querySelectorAll('.gallery-item');
+
+    galleryFilterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            galleryFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+
+            var filter = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(function(item) {
+                var cats = item.getAttribute('data-category') || '';
+                if (filter === 'all' || cats.includes(filter)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+
 }); // End DOMContentLoaded
 
 // ---- COPY M-PESA NUMBER TO CLIPBOARD ----
@@ -657,4 +680,114 @@ function copyMpesa() {
             copyBtn.classList.remove('copied');
         }, 2500);
     }
+}
+
+
+// ============================================
+// GALLERY LIGHTBOX
+// ============================================
+
+// Build the photo data array from the gallery items
+var galleryData = (function() {
+    var items = document.querySelectorAll('.gallery-item');
+    var data  = [];
+
+    items.forEach(function(item) {
+        var img     = item.querySelector('img');
+        var source  = item.querySelector('source');
+        var caption = item.querySelector('.gallery-caption');
+
+        data.push({
+            webp:    source  ? source.getAttribute('srcset') : '',
+            jpg:     img     ? img.getAttribute('src')       : '',
+            alt:     img     ? img.getAttribute('alt')       : '',
+            caption: caption ? caption.textContent.trim()    : ''
+        });
+    });
+
+    return data;
+})();
+
+var currentIndex  = 0;
+var lightbox      = document.getElementById('lightbox');
+var lightboxImg   = document.getElementById('lightbox-img');
+var lightboxPic   = document.getElementById('lightbox-picture');
+var lightboxCap   = document.getElementById('lightbox-caption');
+var lightboxClose = document.getElementById('lightbox-close');
+var lightboxPrev  = document.getElementById('lightbox-prev');
+var lightboxNext  = document.getElementById('lightbox-next');
+
+function openLightbox(index) {
+    if (!lightbox || !galleryData.length) return;
+
+    currentIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function updateLightboxImage() {
+    var d = galleryData[currentIndex];
+    if (!d) return;
+
+    // Update source for WebP
+    var existingSource = lightboxPic.querySelector('source');
+    if (existingSource) {
+        existingSource.setAttribute('srcset', d.webp);
+    } else {
+        var newSource = document.createElement('source');
+        newSource.setAttribute('srcset', d.webp);
+        newSource.setAttribute('type', 'image/webp');
+        lightboxPic.insertBefore(newSource, lightboxImg);
+    }
+
+    lightboxImg.src     = d.jpg;
+    lightboxImg.alt     = d.alt;
+    lightboxCap.textContent = d.caption;
+}
+
+function nextPhoto() {
+    currentIndex = (currentIndex + 1) % galleryData.length;
+    updateLightboxImage();
+}
+
+function prevPhoto() {
+    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+    updateLightboxImage();
+}
+
+// Event listeners
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightboxNext)  lightboxNext.addEventListener('click',  nextPhoto);
+if (lightboxPrev)  lightboxPrev.addEventListener('click',  prevPhoto);
+
+// Close on background click
+if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (!lightbox || !lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'ArrowLeft')  prevPhoto();
+});
+
+// Filter to SKIES project cards
+function filterToSkies() {
+    var projectFilters = document.querySelectorAll('.filter-btn');
+    projectFilters.forEach(function(btn) {
+        if (btn.getAttribute('data-filter') === 'programme') {
+            btn.click();
+        }
+    });
 }

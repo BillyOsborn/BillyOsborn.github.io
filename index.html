@@ -101,6 +101,7 @@
                 <li><a href="#projects"   class="nav-link">Projects</a></li>
                 <li><a href="#services"   class="nav-link">Services</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact"    class="nav-link">Contact</a></li>
                 <li><a href="#booking"    class="nav-cta">Book a Call</a></li>
@@ -1608,6 +1609,371 @@
 
     </section>
     <!-- END TESTIMONIALS SECTION -->
+
+
+    <!-- ============================
+         IN THE FIELD — GALLERY
+    ============================= -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>In the Field</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading">
+                Where the Work <span class="text-accent">Actually Happens</span>
+            </h2>
+
+            <p class="gallery-intro">
+                Behind every strategy is a room. Behind every partnership is a handshake.
+                Behind every framework is a person who showed up.
+            </p>
+
+            <!-- Filter tabs -->
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="events">Events</button>
+                <button class="gallery-filter-btn" data-filter="speaking">Speaking</button>
+                <button class="gallery-filter-btn" data-filter="training">Training</button>
+                <button class="gallery-filter-btn" data-filter="projects">Projects</button>
+                <button class="gallery-filter-btn" data-filter="partnerships">Partnerships</button>
+            </div>
+
+            <!-- Masonry grid -->
+            <div class="gallery-grid" id="gallery-grid">
+
+                <!-- =====================================================
+                     HOW TO ADD A NEW PHOTO:
+                     1. Copy one .gallery-item block
+                     2. Update: data-category, src (webp + jpg), alt, caption, and optional data-project
+                     3. The grid handles any dimension automatically
+                ====================================================== -->
+
+                <div class="gallery-item" data-category="projects events" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(0)">
+                        <picture>
+                            <source srcset="images/billy-osborn-addressing-skies-incubation-programme-stakeholders-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-addressing-skies-incubation-programme-stakeholders-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn addressing SKIES Incubation Project stakeholders, Nakuru 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Addressing SKIES stakeholders, Nakuru · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-thumb" onclick="openLightbox(1)">
+                        <picture>
+                            <source srcset="images/billy-osborn-cybersecurity-workshop-eldoret-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-cybersecurity-workshop-eldoret-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn with cybersecurity workshop participants, Eldoret 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Cybersecurity Workshop, Eldoret · 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="speaking">
+                    <div class="gallery-thumb" onclick="openLightbox(2)">
+                        <picture>
+                            <source srcset="images/billy-osborn-eldohub-keynote-presentation-2025-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-eldohub-keynote-presentation-2025-kenya-africa.jpg"
+                                 alt="Billy Osborn keynote presentation at Eldohub, Eldoret 2025"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Keynote — Eldohub, Eldoret · 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="speaking">
+                    <div class="gallery-thumb" onclick="openLightbox(3)">
+                        <picture>
+                            <source srcset="images/billy-osborn-eldohub-panel-discussion-2025-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-eldohub-panel-discussion-2025-kenya-africa.jpg"
+                                 alt="Billy Osborn panel discussion at Eldohub, Eldoret 2025"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Panel Discussion — Eldohub · 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-thumb" onclick="openLightbox(4)">
+                        <picture>
+                            <source srcset="images/billy-osborn-holding-a-baby-nakuru-box-csr-2022-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-holding-a-baby-nakuru-box-csr-2022-kenya-africa.jpg"
+                                 alt="Billy Osborn holding a baby during Nakuru Box CSR programme 2022"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Nakuru Box CSR Programme · 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events projects" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(5)">
+                        <picture>
+                            <source srcset="images/billy-osborn-keynote-address-skies-incubation-programme-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-keynote-address-skies-incubation-programme-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn keynote address at SKIES Incubation Project event, Nakuru 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Keynote — SKIES Launch, Nakuru · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="partnerships">
+                    <div class="gallery-thumb" onclick="openLightbox(6)">
+                        <picture>
+                            <source srcset="images/billy-osborn-nakuru-county-government-courtesy-visit-2023-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-nakuru-county-government-courtesy-visit-2023-kenya-africa.jpg"
+                                 alt="Billy Osborn with ASSEK CEO at Nakuru County Government CECM courtesy visit 2023"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">County Government Courtesy Visit · 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="partnerships">
+                    <div class="gallery-thumb" onclick="openLightbox(7)">
+                        <picture>
+                            <source srcset="images/billy-osborn-nakuru-county-tourism-association-ncta-partner-engagement-2023-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-nakuru-county-tourism-association-ncta-partner-engagement-2023-kenya-africa.jpg"
+                                 alt="Billy Osborn with Nakuru County Tourism Association members 2023"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">NCTA Partner Engagement · 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-thumb" onclick="openLightbox(8)">
+                        <picture>
+                            <source srcset="images/billy-osborn-ncmd-entrepreneur-awards-2022-holding-nakuru-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-ncmd-entrepreneur-awards-2022-holding-nakuru-kenya-africa.jpg"
+                                 alt="Billy Osborn holding Best Entrepreneurship Programme 2022 award at NCMD Awards"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Best Entrepreneurship Programme — NCMD Awards · 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-thumb" onclick="openLightbox(9)">
+                        <picture>
+                            <source srcset="images/billy-osborn-ncmd-entrepreneur-awards-2022-receiving-nakuru-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-ncmd-entrepreneur-awards-2022-receiving-nakuru-kenya-africa.jpg"
+                                 alt="Billy Osborn and team receiving award at NCMD Entrepreneur Awards 2022"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Receiving Award — NCMD Awards · 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="projects events" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(10)">
+                        <picture>
+                            <source srcset="images/billy-osborn-skies-incubation-programme-launch-ribbon-cutting-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-skies-incubation-programme-launch-ribbon-cutting-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn cutting ribbon at SKIES Incubation Project launch, Nakuru 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIES Programme Launch — Ribbon Cutting · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events projects" data-project="south-rift">
+                    <div class="gallery-thumb" onclick="openLightbox(11)">
+                        <picture>
+                            <source srcset="images/billy-osborn-south-rift-innovation-week-2022-certificate-presentation-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-south-rift-innovation-week-2022-certificate-presentation-kenya-africa.jpg"
+                                 alt="Billy Osborn presenting certificate at South Rift Innovation Week 2022 pitching competition"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Certificate Presentation — South Rift Innovation Week · 2022</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation()">🔗 South Rift Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="projects partnerships">
+                    <div class="gallery-thumb" onclick="openLightbox(12)">
+                        <picture>
+                            <source srcset="images/billy-osborn-strategic-plan-presentation-skiive-capacity-buidling-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-strategic-plan-presentation-skiive-capacity-buidling-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn presenting strategic plan during SKIIVE capacity building, Maiyan Laikipia 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Strategic Plan — SKIIVE Capacity Building, Laikipia · 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-thumb" onclick="openLightbox(13)">
+                        <picture>
+                            <source srcset="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn delivering SKIIVE ecosystem training, Maiyan Laikipia 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIIVE Training Delivery, Laikipia · 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-thumb" onclick="openLightbox(14)">
+                        <picture>
+                            <source srcset="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-rounds-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-rounds-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn making training rounds during SKIIVE workshop, Maiyan Laikipia 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIIVE Workshop Rounds, Laikipia · 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training projects" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(15)">
+                        <picture>
+                            <source srcset="images/billy-osborn-training-skies-incubation-programme-entrepreneurs-kabarak-university-2024-baringo-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-training-skies-incubation-programme-entrepreneurs-kabarak-university-2024-baringo-kenya-africa.jpg"
+                                 alt="Billy Osborn training SKIES entrepreneurs at Kabarak University 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIES Entrepreneurs Training — Kabarak University · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="speaking partnerships">
+                    <div class="gallery-thumb" onclick="openLightbox(16)">
+                        <picture>
+                            <source srcset="images/billy-osborn-us-embassy-keynote-2023-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-us-embassy-keynote-2023-kenya-africa.jpg"
+                                 alt="Billy Osborn keynote address at US Embassy Kenya 2023"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Keynote — US Embassy, Kenya · 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="speaking partnerships">
+                    <div class="gallery-thumb" onclick="openLightbox(17)">
+                        <picture>
+                            <source srcset="images/billy-osborn-us-embassy-presentation-2023-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-us-embassy-presentation-2023-kenya-africa.jpg"
+                                 alt="Billy Osborn presentation at US Embassy Kenya 2023"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Presentation — US Embassy, Kenya · 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="projects" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(18)">
+                        <picture>
+                            <source srcset="images/billy-osborn-with-skies-incubation-programme-project-team-kericho-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-with-skies-incubation-programme-project-team-kericho-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn with SKIES Incubation Project team, Kericho 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIES Project Team, Kericho · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="partnerships projects" data-project="skies">
+                    <div class="gallery-thumb" onclick="openLightbox(19)">
+                        <picture>
+                            <source srcset="images/billy-osborn-with-skies-project-stakeholders-kabarak-university-2024-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-with-skies-project-stakeholders-kabarak-university-2024-kenya-africa.jpg"
+                                 alt="Billy Osborn with SKIES project stakeholders at Kabarak University 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIES Stakeholders — Kabarak University · 2024</span>
+                            <a href="#projects" class="gallery-project-link" onclick="event.stopPropagation(); filterToSkies()">🔗 SKIES Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="partnerships projects">
+                    <div class="gallery-thumb" onclick="openLightbox(20)">
+                        <picture>
+                            <source srcset="images/billy-osborn-with-skiive-partners-2024-maiyan-kenya-africa.webp" type="image/webp">
+                            <img src="images/billy-osborn-with-skiive-partners-2024-maiyan-kenya-africa.jpg"
+                                 alt="Billy Osborn with SKIIVE project partners after workshop, Maiyan Laikipia 2024"
+                                 loading="lazy"/>
+                        </picture>
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">SKIIVE Partners, Maiyan Laikipia · 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END gallery grid -->
+
+        </div>
+    </section>
+    <!-- END GALLERY SECTION -->
+
+    <!-- ============================
+         LIGHTBOX
+    ============================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">✕</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox-content">
+            <picture id="lightbox-picture">
+                <img id="lightbox-img" src="" alt="" />
+            </picture>
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
 
 
     <!-- ============================
