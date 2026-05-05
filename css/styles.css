@@ -4033,3 +4033,121 @@ a.contact-item-value:hover {
     .lightbox-prev { left: 0.5rem; }
     .lightbox-next { right: 0.5rem; }
 }
+
+
+/* ============================================
+   ACCESSIBILITY — CONTRAST & FOCUS FIXES
+   ============================================ */
+
+/* ---- Skip to main content link (hidden until focused) ---- */
+/* Add <a href="#home" class="skip-link">Skip to main content</a>
+   as the very first element inside <body> */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    z-index: 10000;
+    transition: top 0.2s ease;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ---- Visible focus ring on all interactive elements ---- */
+/* This replaces the default browser outline with a branded one */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ---- Improve contrast on secondary text ---- */
+/* The text-mid colour #6B7280 fails WCAG AA on white backgrounds
+   at small font sizes. Darken it slightly. */
+:root {
+    --text-mid: #4B5563; /* Darkened from #6B7280 for WCAG AA compliance */
+}
+
+/* ---- Improve hero subtext contrast ---- */
+/* rgba(255,255,255,0.72) on dark navy fails at small sizes */
+.hero-subtext {
+    color: rgba(255, 255, 255, 0.88); /* Increased from 0.72 */
+}
+
+/* ---- Improve testimonial quote contrast ---- */
+.tcard-quote {
+    color: rgba(255, 255, 255, 0.88); /* Increased from 0.78 */
+}
+
+/* ---- Improve project description contrast ---- */
+.project-desc {
+    color: rgba(255, 255, 255, 0.75); /* Increased from 0.6 */
+}
+
+/* ---- Improve service description contrast ---- */
+.service-card--featured .service-desc {
+    color: rgba(255, 255, 255, 0.8); /* Increased from 0.65 */
+}
+
+/* ---- Improve author info contrast in testimonials ---- */
+.tcard-author-info span {
+    color: rgba(255, 255, 255, 0.65); /* Increased from 0.45 */
+}
+
+/* ---- Improve blog meta text contrast ---- */
+.blog-date,
+.blog-read-time {
+    color: #4B5563; /* Darker than previous for better contrast */
+}
+
+/* ---- Improve footer link contrast ---- */
+.footer-links-group a {
+    color: rgba(255, 255, 255, 0.65); /* Increased from 0.45 */
+}
+
+/* ---- Gallery filter button focus ---- */
+.gallery-filter-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ---- Lightbox keyboard navigation indicator ---- */
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible,
+.lightbox-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ---- Booking option cards — keyboard accessible ---- */
+.booking-option-card {
+    cursor: pointer;
+}
+
+/* Add this to make booking cards focusable if they're not already buttons */
+
+/* ---- Form error states — higher contrast ---- */
+.form-feedback.error {
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c; /* Darker red for better contrast */
+    border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+/* ---- Ensure all placeholder text meets minimum contrast ---- */
+input::placeholder,
+textarea::placeholder {
+    color: #9CA3AF; /* Slightly darker than default for contrast */
+    opacity: 1;
+}

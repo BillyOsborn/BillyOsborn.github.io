@@ -74,10 +74,14 @@
 </head>
 <body>
 
+    <!-- Skip to main content — accessibility for keyboard users -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
+    
     <!-- ============================
          NAVIGATION BAR
     ============================= -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
 
             <!-- Your Name as Logo -->
@@ -87,7 +91,10 @@
             </a>
 
             <!-- Hamburger Button (shows on mobile only) -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false"
+                    aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -113,7 +120,7 @@
     <!-- ============================
          HERO SECTION
     ============================= -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Introduction">
 
         <!-- Animated background shapes -->
         <div class="hero-bg">
@@ -220,7 +227,7 @@
         </div>
 
         <!-- Scroll down indicator -->
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
             <span class="scroll-text">Scroll</span>
             <div class="scroll-line">
                 <div class="scroll-dot"></div>
@@ -423,7 +430,7 @@
                                     what should be automated, and freeing human intelligence for the work
                                     only humans can do.
                                 </p>
-                                <button class="expand-btn" aria-label="Show achievements">
+                                <button class="expand-btn" aria-label="Show achievements for Co-Founder role" aria-expanded="false">
                                     <span class="expand-text">View Achievements</span>
                                     <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M6 9l6 6 6-6"/>
@@ -462,7 +469,7 @@
                                 while architecting governance systems that ensured long-term institutional
                                 relevance and impact.
                             </p>
-                            <button class="expand-btn" aria-label="Show achievements">
+                            <button class="expand-btn" aria-label="Show achievements for Secretary General role" aria-expanded="false">
                                 <span class="expand-text">View Achievements</span>
                                 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M6 9l6 6 6-6"/>
@@ -501,7 +508,7 @@
                                 financial stewardship, and the partnerships that expanded the Centre's
                                 national footprint and credibility.
                             </p>
-                            <button class="expand-btn" aria-label="Show achievements">
+                            <button class="expand-btn" aria-label="Show achievements for General Manager role" aria-expanded="false">
                                 <span class="expand-text">View Achievements</span>
                                 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M6 9l6 6 6-6"/>
@@ -541,7 +548,7 @@
                                 laid the foundation of my signature approach: build with precision,
                                 partner with intent.
                             </p>
-                            <button class="expand-btn" aria-label="Show achievements">
+                            <button class="expand-btn" aria-label="Show achievements for Project Manager role" aria-expanded="false">
                                 <span class="expand-text">View Achievements</span>
                                 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M6 9l6 6 6-6"/>
@@ -580,7 +587,7 @@
                                 capacity building. My first appointment within ACIH, which grew into the
                                 Secretary General role through consistent delivery.
                             </p>
-                            <button class="expand-btn" aria-label="Show achievements">
+                            <button class="expand-btn" aria-label="Show achievements for Regional Represenative role" aria-expanded="false">
                                 <span class="expand-text">View Achievements</span>
                                 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M6 9l6 6 6-6"/>
@@ -1643,7 +1650,7 @@
             </div>
 
             <!-- Masonry grid -->
-            <div class="gallery-grid" id="gallery-grid">
+            <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Photo gallery">
 
                 <!-- =====================================================
                      HOW TO ADD A NEW PHOTO:
@@ -1652,7 +1659,7 @@
                      3. The grid handles any dimension automatically
                 ====================================================== -->
 
-                <div class="gallery-item" data-category="projects events" data-project="skies">
+                <div class="gallery-item" data-category="projects events" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(0)">
                         <picture>
                             <source srcset="images/billy-osborn-addressing-skies-incubation-programme-stakeholders-2024-kenya-africa.webp" type="image/webp">
@@ -1667,7 +1674,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="training">
+                <div class="gallery-item" data-category="training" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(1)">
                         <picture>
                             <source srcset="images/billy-osborn-cybersecurity-workshop-eldoret-2024-kenya-africa.webp" type="image/webp">
@@ -1681,7 +1688,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="speaking">
+                <div class="gallery-item" data-category="speaking" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(2)">
                         <picture>
                             <source srcset="images/billy-osborn-eldohub-keynote-presentation-2025-kenya-africa.webp" type="image/webp">
@@ -1695,7 +1702,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="speaking">
+                <div class="gallery-item" data-category="speaking" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(3)">
                         <picture>
                             <source srcset="images/billy-osborn-eldohub-panel-discussion-2025-kenya-africa.webp" type="image/webp">
@@ -1709,7 +1716,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
+                <div class="gallery-item" data-category="events" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(4)">
                         <picture>
                             <source srcset="images/billy-osborn-holding-a-baby-nakuru-box-csr-2022-kenya-africa.webp" type="image/webp">
@@ -1723,7 +1730,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events projects" data-project="skies">
+                <div class="gallery-item" data-category="events projects" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(5)">
                         <picture>
                             <source srcset="images/billy-osborn-keynote-address-skies-incubation-programme-2024-kenya-africa.webp" type="image/webp">
@@ -1738,7 +1745,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="partnerships">
+                <div class="gallery-item" data-category="partnerships" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(6)">
                         <picture>
                             <source srcset="images/billy-osborn-nakuru-county-government-courtesy-visit-2023-kenya-africa.webp" type="image/webp">
@@ -1752,7 +1759,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="partnerships">
+                <div class="gallery-item" data-category="partnerships" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(7)">
                         <picture>
                             <source srcset="images/billy-osborn-nakuru-county-tourism-association-ncta-partner-engagement-2023-kenya-africa.webp" type="image/webp">
@@ -1766,7 +1773,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
+                <div class="gallery-item" data-category="events" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(8)">
                         <picture>
                             <source srcset="images/billy-osborn-ncmd-entrepreneur-awards-2022-holding-nakuru-kenya-africa.webp" type="image/webp">
@@ -1780,7 +1787,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
+                <div class="gallery-item" data-category="events" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(9)">
                         <picture>
                             <source srcset="images/billy-osborn-ncmd-entrepreneur-awards-2022-receiving-nakuru-kenya-africa.webp" type="image/webp">
@@ -1794,7 +1801,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="projects events" data-project="skies">
+                <div class="gallery-item" data-category="projects events" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(10)">
                         <picture>
                             <source srcset="images/billy-osborn-skies-incubation-programme-launch-ribbon-cutting-2024-kenya-africa.webp" type="image/webp">
@@ -1809,7 +1816,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events projects" data-project="south-rift">
+                <div class="gallery-item" data-category="events projects" data-project="south-rift" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(11)">
                         <picture>
                             <source srcset="images/billy-osborn-south-rift-innovation-week-2022-certificate-presentation-kenya-africa.webp" type="image/webp">
@@ -1824,7 +1831,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="projects partnerships">
+                <div class="gallery-item" data-category="projects partnerships" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(12)">
                         <picture>
                             <source srcset="images/billy-osborn-strategic-plan-presentation-skiive-capacity-buidling-2024-kenya-africa.webp" type="image/webp">
@@ -1838,7 +1845,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="training">
+                <div class="gallery-item" data-category="training" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(13)">
                         <picture>
                             <source srcset="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-2024-kenya-africa.webp" type="image/webp">
@@ -1852,7 +1859,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="training">
+                <div class="gallery-item" data-category="training" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(14)">
                         <picture>
                             <source srcset="images/billy-osborn-strengthening-kenyan-intermediaries-and-innovation-ecosystem-skiive-training-rounds-2024-kenya-africa.webp" type="image/webp">
@@ -1866,7 +1873,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="training projects" data-project="skies">
+                <div class="gallery-item" data-category="training projects" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(15)">
                         <picture>
                             <source srcset="images/billy-osborn-training-skies-incubation-programme-entrepreneurs-kabarak-university-2024-baringo-kenya-africa.webp" type="image/webp">
@@ -1881,7 +1888,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="speaking partnerships">
+                <div class="gallery-item" data-category="speaking partnerships" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(16)">
                         <picture>
                             <source srcset="images/billy-osborn-us-embassy-keynote-2023-kenya-africa.webp" type="image/webp">
@@ -1895,7 +1902,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="speaking partnerships">
+                <div class="gallery-item" data-category="speaking partnerships" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(17)">
                         <picture>
                             <source srcset="images/billy-osborn-us-embassy-presentation-2023-kenya-africa.webp" type="image/webp">
@@ -1909,7 +1916,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="projects" data-project="skies">
+                <div class="gallery-item" data-category="projects" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(18)">
                         <picture>
                             <source srcset="images/billy-osborn-with-skies-incubation-programme-project-team-kericho-2024-kenya-africa.webp" type="image/webp">
@@ -1924,7 +1931,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="partnerships projects" data-project="skies">
+                <div class="gallery-item" data-category="partnerships projects" data-project="skies" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(19)">
                         <picture>
                             <source srcset="images/billy-osborn-with-skies-project-stakeholders-kabarak-university-2024-kenya-africa.webp" type="image/webp">
@@ -1939,7 +1946,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="partnerships projects">
+                <div class="gallery-item" data-category="partnerships projects" role="listitem">
                     <div class="gallery-thumb" onclick="openLightbox(20)">
                         <picture>
                             <source srcset="images/billy-osborn-with-skiive-partners-2024-maiyan-kenya-africa.webp" type="image/webp">
@@ -1971,7 +1978,7 @@
             <picture id="lightbox-picture">
                 <img id="lightbox-img" src="" alt="" />
             </picture>
-            <p class="lightbox-caption" id="lightbox-caption"></p>
+            <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
         </div>
     </div>
 
@@ -2425,6 +2432,7 @@
                                     name="name"
                                     placeholder="Your full name"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
                             <div class="form-group">
@@ -2435,6 +2443,7 @@
                                     name="email"
                                     placeholder="your@email.com"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
                         </div>
@@ -2451,7 +2460,7 @@
 
                         <div class="form-group">
                             <label for="subject">Subject *</label>
-                            <select id="subject" name="subject" required>
+                            <select id="subject" name="subject" required aria-required="true">
                                 <option value="" disabled selected>What is this regarding?</option>
                                 <option>AI Integration Consulting</option>
                                 <option>Ecosystem Development</option>
@@ -2470,6 +2479,7 @@
                                 rows="5"
                                 placeholder="Tell me about your project, challenge, or question..."
                                 required
+                                aria-required="true"
                             ></textarea>
                         </div>
 
@@ -2604,7 +2614,8 @@
                                 <span class="mpesa-label">Send to Number</span>
                                 <span class="mpesa-value" id="mpesa-number">+254 719 343 085</span>
                             </div>
-                            <button class="copy-btn" id="copy-mpesa" onclick="copyMpesa()">
+                            <button class="copy-btn" id="copy-mpesa" onclick="copyMpesa()"
+                                    aria-label="Copy M-Pesa number to clipboard">
                                 Copy
                             </button>
                         </div>
@@ -2740,7 +2751,7 @@
     <!-- ============================
          FOOTER
     ============================= -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Site footer">
         <div class="footer-container">
 
             <div class="footer-top">

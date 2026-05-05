@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
-            hamburger.classList.toggle('open');
+            var isOpen = hamburger.classList.toggle('open');
             navLinks.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
         // Close on link click
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', function() {
                 hamburger.classList.remove('open');
                 navLinks.classList.remove('open');
+                hamburger.setAttribute('aria-expanded','false');
             });
         });
 
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!e.target.closest('.navbar')) {
                 hamburger.classList.remove('open');
                 navLinks.classList.remove('open');
+                hamburger.setAttribute('aria-expanded','false');
             }
         });
     }
@@ -77,22 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- EXPERIENCE: EXPAND / COLLAPSE ACHIEVEMENTS ---
-    document.querySelectorAll('.expand-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const card      = btn.closest('.entry-card');
-            const panel     = card.querySelector('.entry-achievements');
-            const isOpen    = btn.classList.contains('open');
+    document.querySelectorAll('.expand-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var card   = btn.closest('.entry-card');
+            var panel  = card.querySelector('.entry-achievements');
+            var isOpen = btn.classList.contains('open');
 
             if (isOpen) {
                 // Close it
                 panel.style.display = 'none';
                 btn.classList.remove('open');
                 btn.querySelector('.expand-text').textContent = 'View Achievements';
+                btn.setAttribute('aria-expanded', 'false');
             } else {
                 // Open it
                 panel.style.display = 'block';
                 btn.classList.add('open');
                 btn.querySelector('.expand-text').textContent = 'Hide Achievements';
+                btn.setAttribute('aria-expanded', 'true');
             }
         });
     });
