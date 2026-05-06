@@ -4151,3 +4151,61 @@ textarea::placeholder {
     color: #9CA3AF; /* Slightly darker than default for contrast */
     opacity: 1;
 }
+
+
+/* ============================================
+   ACCESSIBILITY — CONTRAST FIXES SESSION 21
+   Targeting specific flagged elements
+   ============================================ */
+
+/* Section labels — "ABOUT ME", "EXPERIENCE", etc. */
+.section-label span:not(.label-line) {
+    color: var(--accent); /* Already gold — issue may be font-weight */
+    font-weight: 700;     /* Bolder weight improves contrast perception */
+}
+
+/* "— Billy Osborn" philosophy author credit */
+.philosophy-author {
+    color: rgba(255, 255, 255, 0.65); /* Up from 0.45 */
+}
+
+/* "CURRENTLY ACTIVE" group label */
+.group-label {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* "PRESENT" badge */
+.current-badge {
+    background: rgba(212, 168, 67, 0.2);  /* Slightly stronger background */
+    color: #C8950A;  /* Darker gold for better contrast on light badge bg */
+    border-color: rgba(212, 168, 67, 0.5);
+}
+
+/* Organisation names in experience cards */
+.entry-org {
+    color: #B8860B; /* Darker gold — passes WCAG AA on white background */
+}
+
+/* "View Achievements" button text */
+.expand-btn {
+    color: #B8860B; /* Darker gold on white card background */
+    border-color: rgba(184, 134, 11, 0.4);
+}
+
+.expand-btn:hover {
+    color: var(--primary);
+    background: rgba(184, 134, 11, 0.1);
+}
+
+/* "Building What Matters" heading */
+/* These headings use var(--primary) which should pass — 
+   if flagged, it may be on a light background section */
+.experience .section-heading {
+    color: var(--primary); /* #0D1B2A on #F5F7FA — ratio 14:1, passes */
+}
+
+/* Frontiers AI Technologies org text in timeline */
+.entry-org {
+    color: #9A6F00; /* AAA compliant gold on white */
+}

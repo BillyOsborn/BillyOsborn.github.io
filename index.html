@@ -75,7 +75,7 @@
 <body>
 
     <!-- Skip to main content — accessibility for keyboard users -->
-    <a href="#home" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     
     <!-- ============================
@@ -116,6 +116,9 @@
 
         </div>
     </nav>
+
+    
+    <main id="main-content">
 
     <!-- ============================
          HERO SECTION
@@ -1372,7 +1375,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Kevin Thananga on LinkedIn"
+                           aria-label="View Kevin Thananga on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -1407,7 +1411,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Kenneth Njihia on LinkedIn"
+                           aria-label="View Kenneth Njihia on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -1442,7 +1447,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Daisy Otieno on LinkedIn"
+                           aria-label="View Daisy Otieno on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -1506,7 +1512,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Kevin Thananga on LinkedIn"
+                           aria-label="View Kevin Thananga on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -1541,7 +1548,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Kenneth Njihia on LinkedIn"
+                           aria-label="View Kenneth Njihia on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -1576,7 +1584,8 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="tcard-linkedin"
-                           title="View on LinkedIn">
+                           title="View Daisy Otieno on LinkedIn"
+                           aria-label="View Daisy Otieno on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2
                                 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
@@ -2318,7 +2327,9 @@
                 <!-- BEGIN Brevo Newsletter Form -->
                 <div class="brevo-iframe-wrap">
                     <!-- PASTE YOUR BREVO IFRAME TAG HERE — replace the line below -->
-                    <iframe width="540" height="305"
+                    <iframe 
+                        title="Newsletter subscription form"
+                        width="540" height="305"
                         src="https://a92353a1.sibforms.com/serve/MUIFAFay4MS49HK4hS1nZ4nt--WXHrowZRW19BXZnjw5-40nOFlfJxuvGF7j8J5hFv4b02ve5wvjEeDQ8VFJmPdvQDshVTUpltG99uw61tntOrpfamwsJ9k4PG352MMhqPxxT4hUZbc6PeLN6_9d2vpxkEtySKGpky-tliXgDfk_IdWpImSX-9Qra2zCFqpq9-U1mYtWwcFEc61qVQ=="
                         frameborder="0"
                         scrolling="auto"
@@ -2606,7 +2617,7 @@
                             <span class="pchannel-flag pchannel-flag--text">KE</span>
                             <div class="pchannel-info">
                                 <strong>M-Pesa — Kenya</strong>
-                                <span>Instant · No fees · Preferred local method</span>
+                                <span>Instant · Preferred local method</span>
                             </div>
                         </div>
                         <div class="mpesa-box">
@@ -2688,29 +2699,31 @@
                     <div class="invoice-form">
 
                         <div class="invoice-form-group">
-                            <label>Client / Organisation Name *</label>
+                            <label for="inv-client">Client / Organisation Name *</label>
                             <input type="text" id="inv-client" placeholder="e.g. Acme Corporation"/>
                         </div>
 
                         <div class="invoice-form-group">
-                            <label>Client Email *</label>
+                            <label for="inv-email">Client Email *</label>
                             <input type="email" id="inv-email" placeholder="finance@client.com"/>
                         </div>
 
                         <div class="invoice-form-group">
-                            <label>Service Description *</label>
+                            <label for="inv-service">Service Description *</label>
                             <input type="text" id="inv-service"
                                    placeholder="e.g. AI Integration Workshop — May 2025"/>
                         </div>
 
                         <div class="invoice-row invoice-row--three">
                             <div class="invoice-form-group">
-                                <label>Amount *</label>
-                                <input type="number" id="inv-amount" placeholder="e.g. 1500"/>
+                                <label for="inv-amount">Amount *</label>
+                                <input type="number" id="inv-amount" 
+                                       placeholder="e.g. 1500"
+                                       aria-required="true"/>
                             </div>
                             <div class="invoice-form-group">
-                                <label>Currency</label>
-                                <select id="inv-currency">
+                                <label for="inv-currency">Currency</label>
+                                <select id="inv-currency" aria-label="Select currency">
                                     <option value="USD" selected>USD</option>
                                     <option value="KES">KES</option>
                                     <option value="EUR">EUR</option>
@@ -2718,14 +2731,14 @@
                                 </select>
                             </div>
                             <div class="invoice-form-group">
-                                <label>Date</label>
+                                <label for="inv-date">Date</label>
                                 <input type="date" id="inv-date"/>
                             </div>
                         </div>
                             
 
                         <div class="invoice-form-group">
-                            <label>Additional Notes</label>
+                            <label for="inv-notes">Additional Notes</label>
                             <textarea id="inv-notes" rows="2"
                                       placeholder="Payment terms, reference number, etc."></textarea>
                         </div>
@@ -2748,6 +2761,8 @@
     <!-- END PAYMENT SECTION -->
 
 
+    </main>
+    
     <!-- ============================
          FOOTER
     ============================= -->
